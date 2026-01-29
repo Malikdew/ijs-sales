@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sales Order</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cek();loadOrder()">
+
+<div class="sidebar">
+<h2>IJS</h2>
+<a href="index.html">🏠 Dashboard</a>
+<a href="outlet.html">🏪 Outlet</a>
+<a href="rute.html">🗺️ Rute</a>
+<a href="order.html">🛒 Sales Order</a>
+<a href="laporan.html">📊 Laporan</a>
+<a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+<h1>Sales Order</h1>
+
+<select id="outletSelect"></select>
+
+<table border="1">
+<tr><th>Produk</th><th>Karton</th><th>Total</th></tr>
+<tbody id="produkList"></tbody>
+</table>
+
+<h3>Total: Rp <span id="total">0</span></h3>
+
+<button onclick="saveOrder()">Simpan</button>
+<button onclick="sendWA()">📩 Kirim WhatsApp</button>
+
+
+<script src="js/auth.js"></script>
+<script src="js/produk.js"></script>
+<script src="js/order.js"></script>
+<script src="js/whatsapp.js"></script>
+
+
+</div>
+</body>
+</html>

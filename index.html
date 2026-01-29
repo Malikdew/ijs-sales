@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b1c2d">
+
+</head>
+<body onload="cek();loadDashboard()">
+<div class="sidebar">
+  <h2>IJS</h2>
+  <a href="index.html">🏠 Dashboard</a>
+  <a href="outlet.html">🏪 Outlet</a>
+  <a href="rute.html">🗺️ Rute</a>
+  <a href="order.html">🛒 Sales Order</a>
+  <a href="laporan.html">📊 Laporan</a>
+  <a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+<div class="main">
+  <h1>Dashboard</h1>
+  <div class="card">Outlet Terdaftar: <span id="totalOutlet"></span></div>
+  <div class="card">Order Terbuat: <span id="totalOrder"></span></div>
+</div>
+<script src="js/auth.js"></script>
+<script>
+function loadDashboard(){
+  const outlets = JSON.parse(localStorage.getItem('outlets'))||[];
+  const orders = JSON.parse(localStorage.getItem('orders'))||[];
+  document.getElementById('totalOutlet').innerText = outlets.length;
+  document.getElementById('totalOrder').innerText = orders.length;
+}
+</script>
+</body>
+</html>

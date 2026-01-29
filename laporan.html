@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Laporan</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cek()">
+<div class="sidebar">
+<h2>IJS</h2>
+<a href="index.html">🏠 Dashboard</a>
+<a href="outlet.html">🏪 Outlet</a>
+<a href="rute.html">🗺️ Rute</a>
+<a href="order.html">🛒 Sales Order</a>
+<a href="laporan.html">📊 Laporan</a>
+<a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+<h1>Laporan Sales</h1>
+<table border="1">
+<tr><th>Outlet</th><th>Total</th></tr>
+<tbody id="listLaporan"></tbody>
+</table>
+</div>
+
+<script>
+const orders = JSON.parse(localStorage.getItem('orders'))||[];
+const tbody = document.getElementById('listLaporan');
+orders.forEach(o=>{
+  tbody.innerHTML += `<tr><td>${o.outlet}</td><td>${o.total}</td></tr>`;
+});
+</script>
+<script src="js/auth.js"></script>
+</body>
+</html>

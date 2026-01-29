@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rute Kunjungan</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cek();loadRute()">
+<div class="sidebar">
+  <h2>IJS</h2>
+  <a href="index.html">🏠 Dashboard</a>
+  <a href="outlet.html">🏪 Outlet</a>
+  <a href="rute.html">🗺️ Rute</a>
+  <a href="order.html">🛒 Sales Order</a>
+  <a href="laporan.html">📊 Laporan</a>
+  <a href="#" onclick="logout()">🚪 Logout</a>
+</div>
+
+<div class="main">
+  <h1>Rute Kunjungan</h1>
+  <table border="1">
+    <tr>
+      <th>Kode</th>
+      <th>Outlet</th>
+      <th>Status</th>
+    </tr>
+    <tbody id="listRute"></tbody>
+  </table>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/rute.js"></script>
+</body>
+</html>

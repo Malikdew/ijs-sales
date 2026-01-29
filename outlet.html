@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Outlet</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="cek();loadOutlet()">
+
+<div class="main">
+<h2>Import Outlet Massal</h2>
+
+<input id="rute" placeholder="Rute (contoh: Sebrang 1)" />
+
+<textarea id="teksOutlet" rows="12"
+placeholder="Contoh:\nA088 – AMELIA BAKEKO\nA095 – AMOR KIOS"></textarea>
+
+<button onclick="importOutlet()">➕ Import Outlet</button>
+
+<table border="1" cellpadding="10">
+<tr>
+<th>Rute</th>
+<th>Kode</th>
+<th>Nama Outlet</th>
+<th>Aksi</th>
+</tr>
+<tbody id="listOutlet"></tbody>
+</table>
+
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/outlet.js"></script>
+
+</body>
+</html>
